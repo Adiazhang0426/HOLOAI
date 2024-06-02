@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Adiazhang
  * @Date: 2024-05-29 16:45:10
- * @LastEditTime: 2024-05-30 11:24:44
+ * @LastEditTime: 2024-06-02 11:27:40
  * @LastEditors: Adiazhang
 -->
 # YOLO detection + location + cluster segmentation for holographic particle field
@@ -30,10 +30,14 @@ In the domainofthree-dimensional (3D) particle holography, diverse imaging chara
 
 The versions of site-packages above are not the only suitable ones, but they are the ones that the author has tested.
 ## Usage 
+### Data and weights acquirement 
+- All data and weights are available in **https://drive.google.com/drive/folders/1C9QlaklXpApIpE8AukCNMTKUnZw_YcGJ?usp=drive_link**. Training dataset and test data are in corresponding folders with the zip file extension, kust download, unzip the files and put them in the ```data``` folder. The pre-trained weights are in the ```weights``` folder with the zip file extension. ```yolov8n.pt``` and ```traced_model.pt``` should be placed in the main directory, while YOLOv7e6e.pt and yolov10x.pt should be placed in the ```weights``` folder in the main directory.
+
+### Preprocessing
 ### Train
-- For provided dataset, the pre-trained model is available in ```weights/yolov7e6e.pt``` and ```weights/yolov10x.pt```. If you want to apply to your own dataset, for the YOLOv7e6e network, just run the ```train_aux_v7.py```, adjust the input parameters in the parser and paths in ```YOLOv7\yolov7dataset.yaml```; for other detection networks, just run the  ```MAIN.py```, choose the model configurations in ```ultralytics/cfg/models``` and adjust the paths in ```ultralytics\cfg\datasets\mydataset.yaml```.
+- For provided dataset, the pre-trained model is saved in ```weights/yolov7e6e.pt``` and ```weights/yolov10x.pt``` by default. If you want to apply to your own dataset, for the YOLOv7e6e network, just run the ```train_aux_v7.py```, adjust the input parameters in the parser and paths in ```YOLOv7\yolov7dataset.yaml```; for other detection networks, just run the  ```MAIN.py```, choose the model configurations in ```ultralytics/cfg/models``` and adjust the paths in ```ultralytics\cfg\datasets\mydataset.yaml```.
 ### Detection & Location & Segmentation
-- The reconstructed holographic images of calibration dot board is in file ```data/cali_test```, and the experimenal data of icing wind tunnel is in file ```data/exp_test```.
+- The reconstructed holographic images of calibration dot board is saved in file ```data/cali_test```, and the experimenal data of icing wind tunnel is saved in file ```data/exp_test``` by default.
 - For location and segmentation, the hyperparameters can be adjusted in the parser of ```MAIN.py``` and the functions used are in ```amin_utils.py```.
 ### Evaluation
 - For evaluation, the ground truth files are available in ```data/ground_truth``` with the format of txt.
