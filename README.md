@@ -35,12 +35,13 @@ The versions of site-packages above are not the only suitable ones, but they are
 
 ### Preprocessing
 ### Train
+- Create the ```runs``` folder in the main directory.
 - For provided dataset, the pre-trained model is saved in ```weights/yolov7e6e.pt``` and ```weights/yolov10x.pt``` by default. If you want to apply to your own dataset, for the YOLOv7e6e network, just run the ```train_aux_v7.py```, adjust the input parameters in the parser and paths in ```YOLOv7\yolov7dataset.yaml```; for other detection networks, just run the  ```MAIN.py```, choose the model configurations in ```ultralytics/cfg/models``` and adjust the paths in ```ultralytics\cfg\datasets\mydataset.yaml```.
 ### Detection & Location & Segmentation
 - The reconstructed holographic images of calibration dot board is saved in file ```data/cali_test```, and the experimenal data of icing wind tunnel is saved in file ```data/exp_test``` by default.
-- For location and segmentation, the hyperparameters can be adjusted in the parser of ```MAIN.py``` and the functions used are in ```amin_utils.py```.
+- For location and segmentation, create the ```results``` folder in the main directory and the hyperparameters can be adjusted in the parser of ```MAIN.py``` and the functions used are in ```main_utils.py```.
 ### Evaluation
-- For evaluation, the ground truth files are available in ```data/ground_truth``` with the format of txt.
+- For evaluation, create the ```tests``` in the main directory and the ground truth files are available in ```data/ground_truth``` with the format of txt.
 
 ## Acknowledgement
 The code is partly based on the work of **YOLOv10: Real-Time End-to-End Object Detection** and **YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors**.
