@@ -15,7 +15,7 @@ Hang Zhang, Boyi Wang, Letian Zhang, Yue Zhao, Yu Wang, Jianhan Feng, Wei Xiao, 
 In the domainofthree-dimensional (3D) particle holography, diverse imaging characteristics across particles of varying scales and positions pose a notable impediment to efficient infor mation extraction. This research introduces an adaptive detection and segmentation approach employing mechanism-guided machine learning techniques. Leveraging a detection network and a particle size distribution oriented cropping operation derived from the atomization mechanism, this method delineates precise regions of interest (ROIs) of particles. Noteworthy considerations encompass not just the characterization of blurred boundaries but also nuanced grayscale variances along reconstruction directions, offering crucial insights for cluster-based segmentation methods. Rigorous evaluation of different detection network settings and segmen tation methods, and detailed analysis are conducted on experimental data from an icing wind tunnel and calibration board underscores detailed analysis, including the ablation experiments of mechanism-guided opearions. The influence of the hyperparameter in segmentation is also illustrated. To showcase its robustness, the proposed method is applied to segment a swirl spray particle field, demonstrating its versatility and applicability across varied particle field scenarios.
 
 <img src="src\algorithm.gif" alt="precess" width="950" height="500">      
-<br /> If you have any question on the code, please contact the author: 22227138@zju.edu.cn
+<br /> If you have any question on the code, please contact the author: 22227138@zju.edu.cn.
 
 ## Requirements
 - Python 3.8.0
@@ -31,7 +31,7 @@ In the domainofthree-dimensional (3D) particle holography, diverse imaging chara
 The versions of site-packages above are not the only suitable ones, but they are the ones that the author has tested.
 ## Usage 
 ### Data and weights acquirement 
-- All data and weights are available in **https://drive.google.com/drive/folders/1C9QlaklXpApIpE8AukCNMTKUnZw_YcGJ?usp=drive_link**. Training dataset and test data are in corresponding folders with the zip file extension, kust download, unzip the files and put them in the ```data``` folder. The pre-trained weights are in the ```weights``` folder with the zip file extension. ```yolov8n.pt``` and ```traced_model.pt``` should be placed in the main directory, while YOLOv7e6e.pt and yolov10x.pt should be placed in the ```weights``` folder in the main directory.
+- All data and weights are available in **https://drive.google.com/drive/folders/1C9QlaklXpApIpE8AukCNMTKUnZw_YcGJ?usp=drive_link**. Training dataset and test data are in corresponding folders with the zip file extension, kust download, unzip the files and put them in the ```data``` folder. The pre-trained weights are in the ```weights``` folder with the zip file extension. ```yolov8n.pt``` and ```traced_model.pt``` should be placed in the main directory, while ```YOLOv7e6e.pt``` and ```yolov10x.pt``` should be placed in the ```weights``` folder in the main directory.
 
 ### Preprocessing
 ### Train
